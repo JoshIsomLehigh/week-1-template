@@ -7,4 +7,4 @@ from student_code import robot_navigation
 # Test 1: Check for unhandled pylint errors
 def test_pylint_errors():
     result = subprocess.run(['pylint', 'student_code.py'], capture_output=True, text=True)
-    assert "error" not in result.stdout.lower(), "Pylint errors found"
+    assert "E0" not in result.stdout, "Pylint errors found"

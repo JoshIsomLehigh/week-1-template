@@ -9,4 +9,4 @@ from student_code import robot_navigation
 # Test 3: Check for unhandled pylint style recommendations
 def test_pylint_style():
     result = subprocess.run(['pylint', 'student_code.py'], capture_output=True, text=True)
-    assert "convention" not in result.stdout.lower(), "Pylint style recommendations found"
+    assert "C0" not in result.stdout, "Pylint style recommendations found"
